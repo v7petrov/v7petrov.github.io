@@ -1,0 +1,39 @@
+{
+  "name": "v7petrov-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website for v7petrov.github.io",
+  "main": "portfolio/index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "dev:python3": "python3 -m http.server 8000",
+    "start": "python -m http.server 8000",
+    "serve": "python -m http.server 8000",
+    "test": "echo \"No tests specified\" && exit 0",
+    "lint": "echo \"No linter configured\" && exit 0"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "developer",
+    "github-pages",
+    "html5",
+    "css3",
+    "javascript"
+  ],
+  "author": "v7petrov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/v7petrov/v7petrov.github.io.git"
+  },
+  "homepage": "https://v7petrov.github.io",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
