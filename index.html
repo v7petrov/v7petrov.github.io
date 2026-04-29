@@ -3,64 +3,580 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>v7petrov - Redirecting to Portfolio</title>
-    <meta http-equiv="refresh" content="0; url=./portfolio/">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            color: white;
-            text-align: center;
-        }
-        .redirect-container {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
-        .spinner {
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            border-top: 3px solid white;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 1rem;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        a {
-            color: #ffd700;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Victor Petrov | Firmware, Controls, and Digital Systems</title>
+    <meta name="description" content="Victor Petrov is a Cal Poly computer engineering student building embedded systems, controls software, digital hardware, and full-stack tooling.">
+    <meta name="theme-color" content="#08111b">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
-    <div class="redirect-container">
-        <div class="spinner"></div>
-        <h1>Redirecting to Portfolio...</h1>
-        <p>You should be redirected automatically in a moment.</p>
-        <p>If you're not redirected, <a href="./portfolio/">click here</a> to continue.</p>
-    </div>
+<body data-page="home">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-aura page-aura--one" aria-hidden="true"></div>
+    <div class="page-aura page-aura--two" aria-hidden="true"></div>
+    <div class="page-grid" aria-hidden="true"></div>
 
-    <script>
-        // JavaScript fallback redirect
-        setTimeout(function() {
-            window.location.href = './portfolio/';
-        }, 1000);
-    </script>
+    <header class="site-header" id="top">
+        <nav class="site-nav section-shell" aria-label="Primary">
+            <a class="wordmark" href="#top">
+                Victor Petrov
+                <span>firmware | controls | silicon</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-panel" data-nav-toggle>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+
+            <div class="nav-panel" id="site-nav-panel" data-nav-panel>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="portfolio/index.html">Atlas</a>
+                <a href="#contact">Contact</a>
+                <a class="button button--nav" href="Resume%20Latex.txt">Resume Source</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="hero section-shell" id="home">
+            <div class="hero-copy-block" data-reveal>
+                <p class="eyebrow">Computer Engineering Student • Cal Poly, San Luis Obispo</p>
+                <h1 class="display-title">Building systems that stretch from bare-metal firmware to branch predictors.</h1>
+                <p class="lede">
+                    I build across embedded software, controls, digital hardware, and full-stack tools. The common thread is simple:
+                    make complicated systems observable, reliable, and fast enough that they stop arguing with the deadline.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button--primary" href="portfolio/index.html">Explore Project Atlas</a>
+                    <a class="button button--ghost" href="#contact">Start A Conversation</a>
+                </div>
+
+                <div class="inline-link-row">
+                    <a href="Resume%20Latex.txt">Open resume source</a>
+                    <a href="portfolio/software-projects.html">Browse software builds</a>
+                </div>
+
+                <div class="metric-grid">
+                    <article class="metric-card">
+                        <span class="metric-value">18</span>
+                        <span class="metric-label">resume projects mapped into the site</span>
+                    </article>
+                    <article class="metric-card">
+                        <span class="metric-value">3.7</span>
+                        <span class="metric-label">GPA while juggling labs, code, and suspiciously loud power supplies</span>
+                    </article>
+                    <article class="metric-card">
+                        <span class="metric-value">3</span>
+                        <span class="metric-label">internship and teaching roles across aerospace, academia, and industrial systems</span>
+                    </article>
+                </div>
+            </div>
+
+            <div class="hero-stage" data-reveal>
+                <div class="portrait-card card">
+                    <div class="portrait-frame">
+                        <img
+                            src="portfolio/images/IMG_2143.jpg"
+                            alt="Victor Petrov"
+                            class="portrait-image"
+                            loading="eager"
+                            decoding="async"
+                        >
+                    </div>
+                    <div class="floating-note">Rubber duck reviewer currently on shift.</div>
+                    <div class="badge-cluster" aria-hidden="true">
+                        <span>debug log whisperer</span>
+                        <span>oscilloscope friendly</span>
+                    </div>
+                </div>
+
+                <aside class="chaos-card card">
+                    <p class="eyebrow eyebrow--compact">Lab Status</p>
+                    <h2>Mission control, but with more zip ties.</h2>
+                    <p class="status-line" data-rotating-text data-phrases="Branch predictor feeling optimistic.|Oscilloscope calm, build logs caffeinated.|Robot arm promised to be careful today.|Flight simulator behaving suspiciously well.">
+                        Branch predictor feeling optimistic.
+                    </p>
+
+                    <dl class="status-grid">
+                        <div>
+                            <dt>Primary Focus</dt>
+                            <dd>Embedded systems, controls, digital design</dd>
+                        </div>
+                        <div>
+                            <dt>Current Base</dt>
+                            <dd>San Luis Obispo, California</dd>
+                        </div>
+                        <div>
+                            <dt>Favorite Problems</dt>
+                            <dd>Real-time debugging, hardware bring-up, architecture work</dd>
+                        </div>
+                    </dl>
+                </aside>
+            </div>
+        </section>
+
+        <section class="ticker-shell" aria-label="Selected skills">
+            <div class="ticker-track">
+                <span>C / C++</span>
+                <span>Python</span>
+                <span>SystemVerilog</span>
+                <span>Bare-metal Firmware</span>
+                <span>RISC-V</span>
+                <span>CUDA</span>
+                <span>Motor Control</span>
+                <span>TCP / UDP</span>
+                <span>OpenCV + ONNX Runtime</span>
+                <span>sometimes supervised by a duck</span>
+            </div>
+        </section>
+
+        <section class="section-shell section-stack" id="about">
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">About</p>
+                <h2>Build-first engineering with schematics on one screen and compiler logs on the other.</h2>
+            </div>
+
+            <div class="about-grid">
+                <article class="card narrative-card" data-reveal>
+                    <p>
+                        I am Victor Petrov, a Computer Engineering student at California Polytechnic State University in San Luis Obispo.
+                        I like projects that cross boundaries: firmware that has to meet timing, tools that make hardware explain itself,
+                        and digital systems that only behave once every signal is traced all the way back to reality.
+                    </p>
+                    <p>
+                        My work spans C and C++, Python, SystemVerilog, networking, controls, simulation, and enough web tooling to give
+                        embedded systems a user interface that does not feel like punishment.
+                    </p>
+                    <p>
+                        The goal is not to collect technologies. It is to make complicated systems understandable, measurable, and durable
+                        when they are connected to other complicated systems.
+                    </p>
+                </article>
+
+                <div class="fact-column">
+                    <article class="card fact-card" data-reveal>
+                        <p class="eyebrow eyebrow--compact">Education</p>
+                        <h3>California Polytechnic State University</h3>
+                        <p>B.S. in Computer Engineering</p>
+                        <p>Graduation: June 2026</p>
+                        <p>GPA: 3.7 / 4.0</p>
+                    </article>
+
+                    <article class="card fact-card" data-reveal>
+                        <p class="eyebrow eyebrow--compact">Relevant Coursework</p>
+                        <ul class="chip-list">
+                            <li>Data Structures &amp; Algorithms</li>
+                            <li>Real Time Operating Systems</li>
+                            <li>Computer Networking</li>
+                            <li>Computer Security</li>
+                            <li>Modern Computer Architecture</li>
+                            <li>Digital Signals &amp; Systems</li>
+                            <li>Classical Controls</li>
+                        </ul>
+                    </article>
+
+                    <article class="card fact-card" data-reveal>
+                        <p class="eyebrow eyebrow--compact">Lab Rules</p>
+                        <ul class="plain-list">
+                            <li>Trace the signal before making assumptions.</li>
+                            <li>Profile first, optimize second.</li>
+                            <li>If it looks magical, instrument it.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-shell section-stack" id="experience">
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">Experience</p>
+                <h2>Internships and teaching roles built around debugging real systems, not hypothetical ones.</h2>
+            </div>
+
+            <div class="experience-grid">
+                <article class="experience-card card" data-reveal>
+                    <div class="experience-header">
+                        <div class="logo-disc">
+                            <img src="portfolio/icons/generalatomics.png" alt="General Atomics logo" loading="lazy">
+                        </div>
+                        <div>
+                            <p class="role-title">Controls Software Engineer Intern</p>
+                            <p class="company-line">General Atomics • Poway, CA</p>
+                            <p class="date-line">June 2025 – September 2025</p>
+                        </div>
+                    </div>
+                    <ul class="detail-list">
+                        <li>Maintained and debugged a large-scale C++ flight simulator codebase with real-time networking requirements across multiple interconnected systems.</li>
+                        <li>Reengineered CMake configuration files, cutting build times by 45% and improving cross-platform compilation reliability.</li>
+                        <li>Built Python and Bash automation to remove 15+ hours of manual build and deployment work each week.</li>
+                        <li>Optimized embedded OpenCV and ONNX Runtime implementations through hardware-level profiling, improving inference speed by 300% and reducing frame latency by 65%.</li>
+                        <li>Led a Windows-to-Linux migration effort for a complex simulator codebase while preserving feature parity.</li>
+                        <li>Implemented and debugged TCP and UDP communication across 8+ processes, holding sub-10ms latency and 99.9% reliability in a distributed real-time system.</li>
+                    </ul>
+                    <ul class="chip-list chip-list--compact">
+                        <li>C++</li>
+                        <li>Python</li>
+                        <li>Bash</li>
+                        <li>CMake</li>
+                        <li>OpenCV</li>
+                        <li>ONNX Runtime</li>
+                        <li>TCP / UDP</li>
+                    </ul>
+                </article>
+
+                <article class="experience-card card" data-reveal>
+                    <div class="experience-header">
+                        <div class="logo-disc">
+                            <img src="portfolio/icons/calpoly.png" alt="Cal Poly logo" loading="lazy">
+                        </div>
+                        <div>
+                            <p class="role-title">ISA Student Assistant</p>
+                            <p class="company-line">California Polytechnic State University • San Luis Obispo, CA</p>
+                            <p class="date-line">September 2024 – Present</p>
+                        </div>
+                    </div>
+                    <ul class="detail-list">
+                        <li>Served as a teaching assistant for Digital Design, guiding 30+ students through Verilog, SystemVerilog, and computer architecture fundamentals.</li>
+                        <li>Ran weekly lab sessions for FPGA-based projects and hands-on debugging.</li>
+                        <li>Mentored students on ModelSim and Vivado workflows, waveform analysis, and testbench development.</li>
+                    </ul>
+                    <ul class="chip-list chip-list--compact">
+                        <li>Verilog</li>
+                        <li>SystemVerilog</li>
+                        <li>FPGA Labs</li>
+                        <li>Mentoring</li>
+                    </ul>
+                </article>
+
+                <article class="experience-card card" data-reveal>
+                    <div class="experience-header">
+                        <div class="logo-disc">
+                            <img src="portfolio/icons/leguan.jpg" alt="LEGUAN MicroElectronics logo" loading="lazy">
+                        </div>
+                        <div>
+                            <p class="role-title">Embedded Software Intern</p>
+                            <p class="company-line">LEGUAN MicroElectronics Co. • Shandong, China</p>
+                            <p class="date-line">June 2024 – September 2024</p>
+                        </div>
+                    </div>
+                    <ul class="detail-list">
+                        <li>Developed AI-enhanced control systems for industrial crystal growth furnaces using GMDH algorithms to optimize real-time PLC operations.</li>
+                        <li>Built a fault-tolerant communication layer between the AI inference system and industrial PLCs using standard networking protocols.</li>
+                    </ul>
+                    <ul class="chip-list chip-list--compact">
+                        <li>Industrial Controls</li>
+                        <li>PLC</li>
+                        <li>AI Inference</li>
+                        <li>Networking</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-shell section-stack" id="skills">
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">Skills</p>
+                <h2>A technical stack shaped by low-level systems, hardware validation, and practical debugging.</h2>
+            </div>
+
+            <div class="skills-grid">
+                <article class="card skill-card" data-reveal>
+                    <p class="eyebrow eyebrow--compact">Languages</p>
+                    <h3>Programming languages and methodologies</h3>
+                    <ul class="chip-list">
+                        <li>C / C++</li>
+                        <li>Python</li>
+                        <li>RV32 Assembly</li>
+                        <li>Verilog</li>
+                        <li>VHDL</li>
+                        <li>UVM</li>
+                        <li>Bash</li>
+                        <li>Perl</li>
+                    </ul>
+                </article>
+
+                <article class="card skill-card" data-reveal>
+                    <p class="eyebrow eyebrow--compact">Embedded</p>
+                    <h3>Firmware, drivers, and real-time systems</h3>
+                    <ul class="chip-list">
+                        <li>Bare-metal Firmware</li>
+                        <li>FreeRTOS</li>
+                        <li>Device Drivers</li>
+                        <li>Hardware Bring-up</li>
+                        <li>Embedded Linux</li>
+                        <li>Motor Control</li>
+                        <li>PID Control</li>
+                    </ul>
+                </article>
+
+                <article class="card skill-card" data-reveal>
+                    <p class="eyebrow eyebrow--compact">Digital Design</p>
+                    <h3>Architecture, logic, and verification</h3>
+                    <ul class="chip-list">
+                        <li>RISC-V Microarchitecture</li>
+                        <li>Caches</li>
+                        <li>Branch Prediction</li>
+                        <li>FPGA Validation</li>
+                        <li>Gate-level Testing</li>
+                        <li>Testbenches</li>
+                        <li>Clock-domain Crossing</li>
+                    </ul>
+                </article>
+
+                <article class="card skill-card" data-reveal>
+                    <p class="eyebrow eyebrow--compact">Protocols</p>
+                    <h3>Buses, interfaces, and communication</h3>
+                    <ul class="chip-list">
+                        <li>PCIe</li>
+                        <li>SATA</li>
+                        <li>AXI</li>
+                        <li>Wishbone</li>
+                        <li>I2C</li>
+                        <li>SPI</li>
+                        <li>UART</li>
+                        <li>TCP / UDP</li>
+                    </ul>
+                </article>
+
+                <article class="card skill-card" data-reveal>
+                    <p class="eyebrow eyebrow--compact">Toolchain</p>
+                    <h3>Measurement, build, simulation, and ML tooling</h3>
+                    <ul class="chip-list">
+                        <li>Oscilloscope</li>
+                        <li>Logic Analyzer</li>
+                        <li>CMake</li>
+                        <li>Git</li>
+                        <li>Docker</li>
+                        <li>Yosys</li>
+                        <li>OpenLane</li>
+                        <li>MATLAB / Simulink</li>
+                        <li>Gazebo</li>
+                        <li>CUDA</li>
+                        <li>PyTorch</li>
+                        <li>OpenCV</li>
+                        <li>ONNX Runtime</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-shell section-stack" id="atlas">
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">Project Atlas</p>
+                <h2>Every resume project is now organized into a slightly theatrical archive.</h2>
+            </div>
+
+            <div class="atlas-preview-grid">
+                <article class="card atlas-card" data-reveal>
+                    <p class="atlas-count">6 builds</p>
+                    <h3>Software, AI &amp; Simulation</h3>
+                    <p>Telemetry dashboards, robot control software, VTOL sims, transformers, and GPU kernels that needed a direct conversation with PTX.</p>
+                    <a class="button button--ghost" href="portfolio/software-projects.html">Open software wing</a>
+                </article>
+
+                <article class="card atlas-card" data-reveal>
+                    <p class="atlas-count">7 builds</p>
+                    <h3>Hardware, Robotics &amp; Controls</h3>
+                    <p>Motor controllers, robot arms, power systems, instrumentation, and one analog lock with strong opinions about audio frequency.</p>
+                    <a class="button button--ghost" href="portfolio/hardware-control-projects.html">Open hardware wing</a>
+                </article>
+
+                <article class="card atlas-card" data-reveal>
+                    <p class="atlas-count">5 builds</p>
+                    <h3>Chip Design &amp; Digital Systems</h3>
+                    <p>Custom processors, memory accelerators, asynchronous FIFOs, and hardware security experiments with placeholders standing guard.</p>
+                    <a class="button button--ghost" href="portfolio/chip-design-projects.html">Open silicon wing</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-shell section-stack" id="projects">
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">Featured Experiments</p>
+                <h2>Selected builds with placeholder visuals, placeholder links, and real engineering underneath.</h2>
+            </div>
+
+            <div class="feature-grid">
+                <article class="card feature-card" data-reveal>
+                    <div class="project-poster poster--motor" role="img" aria-label="Placeholder art for the real-time motor control system">
+                        <span class="poster-kicker">Placeholder visual</span>
+                        <strong>Torque Plot</strong>
+                        <small>no sparks in this render</small>
+                    </div>
+                    <div class="feature-copy">
+                        <p class="project-category">Robotics / Controls</p>
+                        <h3>Real-Time Motor Control System</h3>
+                        <p>Adapted open-source firmware for custom PCBs, added faster terminal tooling, and validated safety behavior under real fault conditions.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>C / C++</li>
+                            <li>Embedded Linux</li>
+                            <li>Telemetry</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="portfolio/hardware-control-projects.html#motor-control">Build notes</a>
+                            <a href="https://example.com/motor-control-demo">Placeholder demo</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card feature-card" data-reveal>
+                    <div class="project-poster poster--robot" role="img" aria-label="Placeholder art for the four-axis robot arm">
+                        <span class="poster-kicker">Placeholder visual</span>
+                        <strong>Robot Blueprint</strong>
+                        <small>joints behaving for the camera</small>
+                    </div>
+                    <div class="feature-copy">
+                        <p class="project-category">Embedded / Robotics</p>
+                        <h3>Full Stack 4-Axis Robot Arm</h3>
+                        <p>Designed RP2040 motor-controller boards, built the IK engine, and wired in a BLE-enabled interface for wireless control.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>PCB Design</li>
+                            <li>Bare Metal C</li>
+                            <li>MicroPython</li>
+                            <li>BLE</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="portfolio/hardware-control-projects.html#robot-arm">Build notes</a>
+                            <a href="https://example.com/robot-arm-gallery">Placeholder gallery</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card feature-card" data-reveal>
+                    <div class="project-poster poster--telemetry" role="img" aria-label="Placeholder art for the telemetry platform">
+                        <span class="poster-kicker">Placeholder visual</span>
+                        <strong>Data Wall</strong>
+                        <small>graphs pretending to be calm</small>
+                    </div>
+                    <div class="feature-copy">
+                        <p class="project-category">Full Stack / Data</p>
+                        <h3>Real-Time Telemetry Platform</h3>
+                        <p>Built a React and Flask telemetry stack for live vehicle data, testing workflows, and post-run analysis.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>Python</li>
+                            <li>Flask</li>
+                            <li>React</li>
+                            <li>Docker</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="portfolio/software-projects.html#telemetry-platform">Build notes</a>
+                            <a href="https://example.com/telemetry-dashboard">Placeholder dashboard</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card feature-card" data-reveal>
+                    <div class="project-poster poster--riscv" role="img" aria-label="Placeholder art for the custom RISC-V processor">
+                        <span class="poster-kicker">Placeholder visual</span>
+                        <strong>Pipeline Map</strong>
+                        <small>branch predictor acting confident</small>
+                    </div>
+                    <div class="feature-copy">
+                        <p class="project-category">Digital Design</p>
+                        <h3>Custom RISC-V Processor</h3>
+                        <p>Designed a RISC-V core with caches, pipelining, branch prediction, FPGA validation, and SystemVerilog testbenches for coverage.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>SystemVerilog</li>
+                            <li>RISC-V</li>
+                            <li>FPGA</li>
+                            <li>Python</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="portfolio/chip-design-projects.html#riscv-processor">Build notes</a>
+                            <a href="https://example.com/riscv-waveforms">Placeholder waveforms</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card feature-card" data-reveal>
+                    <div class="project-poster poster--gridguard" role="img" aria-label="Placeholder art for the GridGuard battery system">
+                        <span class="poster-kicker">Placeholder visual</span>
+                        <strong>Battery Vault</strong>
+                        <small>cells on their best behavior</small>
+                    </div>
+                    <div class="feature-copy">
+                        <p class="project-category">Power / Product</p>
+                        <h3>GridGuard - Residential Battery UPS</h3>
+                        <p>Moved from customer discovery to prototype, with battery validation methods and power management designed around reclaimed lithium cells.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>Power Electronics</li>
+                            <li>Battery Chemistry</li>
+                            <li>Product Development</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="portfolio/hardware-control-projects.html#gridguard">Build notes</a>
+                            <a href="https://example.com/gridguard-photos">Placeholder photos</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card feature-card" data-reveal>
+                    <div class="project-poster poster--gpt" role="img" aria-label="Placeholder art for the MiniGPT experiment">
+                        <span class="poster-kicker">Placeholder visual</span>
+                        <strong>Tiny Transformer</strong>
+                        <small>token budget still under control</small>
+                    </div>
+                    <div class="feature-copy">
+                        <p class="project-category">ML / Research</p>
+                        <h3>MiniGPT</h3>
+                        <p>Implemented a minimal GPT-style transformer from scratch in PyTorch to understand tokenization, attention, and end-to-end sequence generation.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>PyTorch</li>
+                            <li>Self-Attention</li>
+                            <li>Google Colab</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="portfolio/software-projects.html#minigpt">Build notes</a>
+                            <a href="https://example.com/minigpt-samples">Placeholder samples</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-shell section-stack" id="contact">
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">Contact</p>
+                <h2>If you need someone who can move between firmware, controls, and digital systems, here are the clean signal paths.</h2>
+            </div>
+
+            <div class="contact-grid">
+                <article class="card contact-card" data-reveal>
+                    <h3>Direct links</h3>
+                    <ul class="contact-list">
+                        <li><a href="mailto:799vpetrov@gmail.com">799vpetrov@gmail.com</a></li>
+                        <li><a href="tel:6503827248">(650) 382-7248</a></li>
+                        <li><a href="https://linkedin.com/in/vpetrov-codes">linkedin.com/in/vpetrov-codes</a></li>
+                        <li><a href="https://github.com/v7petrov">github.com/v7petrov</a></li>
+                        <li><a href="Resume%20Latex.txt">Resume source file</a></li>
+                    </ul>
+                </article>
+
+                <article class="card contact-card" data-reveal>
+                    <h3>Placeholder extras</h3>
+                    <p>Anything not included in the repo now has a clearly labeled stand-in until the polished version exists.</p>
+                    <div class="project-links">
+                        <a href="https://example.com/victor-petrov-meeting">Placeholder calendar</a>
+                        <a href="https://example.com/victor-petrov-media-kit">Placeholder media kit</a>
+                    </div>
+                    <p class="small-note">Project screenshots, videos, and case-study links across the atlas are intentionally placeholders where public assets are not available yet.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="section-shell footer-row">
+            <p>Built like a lab notebook, not a sterile brochure.</p>
+            <a href="#top">Back to top</a>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,8 +1,8 @@
 {
   "name": "v7petrov-portfolio",
   "version": "1.0.0",
-  "description": "Professional portfolio website for v7petrov.github.io",
-  "main": "portfolio/index.html",
+  "description": "Creative portfolio website for Victor Petrov with project atlas and resume-driven content.",
+  "main": "index.html",
   "scripts": {
     "dev": "python -m http.server 8000",
     "dev:python3": "python3 -m http.server 8000",

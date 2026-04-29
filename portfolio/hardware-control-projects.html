@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware, Robotics &amp; Control Projects | Victor Petrov</title>
+    <meta name="description" content="Hardware, robotics, and control projects by Victor Petrov.">
+    <meta name="theme-color" content="#08111b">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js" defer></script>
+</head>
+<body data-page="hardware">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-aura page-aura--one" aria-hidden="true"></div>
+    <div class="page-aura page-aura--two" aria-hidden="true"></div>
+    <div class="page-grid" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+        <nav class="site-nav section-shell" aria-label="Primary">
+            <a class="wordmark" href="../index.html">
+                Victor Petrov
+                <span>hardware wing</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-panel" data-nav-toggle>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+
+            <div class="nav-panel" id="site-nav-panel" data-nav-panel>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#experience">Experience</a>
+                <a href="../index.html#skills">Skills</a>
+                <a href="index.html">Atlas</a>
+                <a href="software-projects.html">Software</a>
+                <a href="chip-design-projects.html">Silicon</a>
+                <a class="button button--nav" href="../index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="section-shell project-page-hero">
+            <div class="subpage-headline" data-reveal>
+                <p class="eyebrow">Hardware, Robotics &amp; Controls</p>
+                <h1>Motors, machines, analog circuits, and control loops with enough personality to need adult supervision.</h1>
+                <p>
+                    This wing collects the hands-on hardware work: custom control boards, robotics, power systems, instrumentation,
+                    and control theory projects where simulation meets physically persuasive reality.
+                </p>
+                <div class="hero-meta-row">
+                    <span>7 detailed projects</span>
+                    <span>placeholder visuals included</span>
+                    <span>real build notes, no fake certainty</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-shell section-stack">
+            <div class="project-detail-grid">
+                <article class="card project-detail-card" id="motor-control" data-reveal>
+                    <div class="project-poster poster--motor" role="img" aria-label="Placeholder visual for the motor control system">
+                        <span class="poster-kicker">Placeholder preview</span>
+                        <strong>Motor Stack</strong>
+                        <small>fault handling with manners</small>
+                    </div>
+                    <div class="project-detail-copy">
+                        <p class="project-meta">C / C++ / Embedded Linux / Bare-metal Firmware</p>
+                        <h2>Real-Time Motor Control System</h2>
+                        <p>Adapted and debugged a motor-controller firmware stack to match custom hardware and testing needs.</p>
+                        <ul class="detail-list">
+                            <li>Debugged and adapted open-source motor controller firmware in C for custom PCB hardware, resolving initialization failures, PWM issues, and communication mismatches.</li>
+                            <li>Created custom terminal commands to improve firmware bring-up and debugging, speeding up loading times by 10x.</li>
+                            <li>Calibrated motor controller parameters using telemetry data to improve performance while maintaining safety margins.</li>
+                            <li>Validated diagnostic and error-handling routines for overcurrent, overvoltage, and overtemperature safe-state behavior.</li>
+                        </ul>
+                        <ul class="chip-list chip-list--compact">
+                            <li>firmware bring-up</li>
+                            <li>pwm</li>
+                            <li>fault detection</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://example.com/motor-case-study">Placeholder case study</a>
+                            <a href="https://example.com/motor-demo">Placeholder demo</a>
+                            <a href="https://example.com/motor-telemetry">Placeholder telemetry plots</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-detail-card" id="robot-arm" data-reveal>
+                    <div class="project-poster poster--robot" role="img" aria-label="Placeholder visual for the four-axis robot arm">
+                        <span class="poster-kicker">Placeholder preview</span>
+                        <strong>Arm Blueprint</strong>
+                        <small>inverse kinematics, zero stage fright</small>
+                    </div>
+                    <div class="project-detail-copy">
+                        <p class="project-meta">PCB Design / Bare Metal C / MicroPython / I2C / BLE</p>
+                        <h2>Full Stack 4-Axis Robot Arm</h2>
+                        <p>Built a distributed robot-control architecture from custom motor boards through wireless control software.</p>
+                        <ul class="detail-list">
+                            <li>Designed and brought up compact RP2040 motor-controller PCBs to enable a distributed control architecture with I2C communication across four nodes.</li>
+                            <li>Implemented the inverse kinematics engine in MicroPython and later optimized it to bare-metal C for real-time motor control.</li>
+                            <li>Developed a BLE-enabled web application interface for wireless robot control and coordination.</li>
+                        </ul>
+                        <ul class="chip-list chip-list--compact">
+                            <li>rp2040</li>
+                            <li>ik engine</li>
+                            <li>ble control</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://example.com/robot-arm-case-study">Placeholder case study</a>
+                            <a href="https://example.com/robot-arm-demo">Placeholder demo</a>
+                            <a href="https://example.com/robot-arm-photos">Placeholder build photos</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-detail-card" id="gridguard" data-reveal>
+                    <div class="project-poster poster--gridguard" role="img" aria-label="Placeholder visual for GridGuard">
+                        <span class="poster-kicker">Placeholder preview</span>
+                        <strong>Battery Vault</strong>
+                        <small>cost-conscious electrons</small>
+                    </div>
+                    <div class="project-detail-copy">
+                        <p class="project-meta">Customer Development / Battery Chemistry / Power Electronics</p>
+                        <h2>GridGuard - Residential Battery UPS</h2>
+                        <p>Led a product concept from customer discovery through prototype for backup residential power.</p>
+                        <ul class="detail-list">
+                            <li>Led the full product development cycle from customer discovery to a working prototype of a home power supply.</li>
+                            <li>Engineered battery testing and validation protocols to safely repurpose used lithium-ion cells, reducing UPS cost by 50%.</li>
+                            <li>Designed power-management circuitry to convert repurposed battery packs into a residential grid-backup system.</li>
+                        </ul>
+                        <ul class="chip-list chip-list--compact">
+                            <li>battery validation</li>
+                            <li>prototype</li>
+                            <li>power conversion</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://example.com/gridguard-case-study">Placeholder case study</a>
+                            <a href="https://example.com/gridguard-demo">Placeholder demo</a>
+                            <a href="https://example.com/gridguard-photos">Placeholder photos</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-detail-card" id="function-generator" data-reveal>
+                    <div class="project-poster poster--instrument" role="img" aria-label="Placeholder visual for the function generator and oscilloscope">
+                        <span class="poster-kicker">Placeholder preview</span>
+                        <strong>Bench Tool</strong>
+                        <small>register map included</small>
+                    </div>
+                    <div class="project-detail-copy">
+                        <p class="project-meta">C++ / I2C / PWM / UART</p>
+                        <h2>Function Generator and Oscilloscope</h2>
+                        <p>Programmed an STM32-based instrument stack at the register level without leaning on HAL abstractions.</p>
+                        <ul class="detail-list">
+                            <li>Programmed a function generator and oscilloscope on STM32 without using HAL, debugging through JTAG hardware.</li>
+                            <li>Implemented I2C, UART, and SPI communication protocols through direct register-level programming using STM32 documentation.</li>
+                            <li>Reserved placeholder links for future captures of the interface, measurements, and board build photos.</li>
+                        </ul>
+                        <ul class="chip-list chip-list--compact">
+                            <li>stm32</li>
+                            <li>jtag</li>
+                            <li>register-level io</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://example.com/instrument-case-study">Placeholder case study</a>
+                            <a href="https://example.com/instrument-demo">Placeholder demo</a>
+                            <a href="https://example.com/instrument-build">Placeholder build photos</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-detail-card" id="rov" data-reveal>
+                    <div class="project-poster poster--rov" role="img" aria-label="Placeholder visual for the underwater ROV">
+                        <span class="poster-kicker">Placeholder preview</span>
+                        <strong>ROV Control</strong>
+                        <small>submerged confidence pending</small>
+                    </div>
+                    <div class="project-detail-copy">
+                        <p class="project-meta">ESP32 / C++ / Servo Control</p>
+                        <h2>Underwater Remote Operating Vehicle</h2>
+                        <p>Implemented embedded control and communication for a multi-servo underwater vehicle.</p>
+                        <ul class="detail-list">
+                            <li>Programmed ESP32 firmware to interface with five servo motors and three sensors.</li>
+                            <li>Implemented Bluetooth communication for real-time control and data transmission.</li>
+                            <li>Ran from September 2024 through June 2025 and now includes explicit placeholders for future test footage.</li>
+                        </ul>
+                        <ul class="chip-list chip-list--compact">
+                            <li>esp32</li>
+                            <li>bluetooth</li>
+                            <li>servo control</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://example.com/rov-case-study">Placeholder case study</a>
+                            <a href="https://example.com/rov-demo">Placeholder demo</a>
+                            <a href="https://example.com/rov-build">Placeholder build photos</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-detail-card" id="frequency-lock" data-reveal>
+                    <div class="project-poster poster--lock" role="img" aria-label="Placeholder visual for the frequency-actuated lock">
+                        <span class="poster-kicker">Placeholder preview</span>
+                        <strong>Analog Lock</strong>
+                        <small>only opens for the right song</small>
+                    </div>
+                    <div class="project-detail-copy">
+                        <p class="project-meta">Analog Circuit Design / Op-Amps / BJT / Power Electronics</p>
+                        <h2>Frequency-Actuated Lock</h2>
+                        <p>Designed an analog lock that responds only to a specific audio frequency.</p>
+                        <ul class="detail-list">
+                            <li>Designed and built an analog lock that opens only at a specific audio frequency using cascaded bandpass filters, a BJT amplifier stage, and op-amp gain circuits.</li>
+                            <li>Implemented a solenoid driver circuit with flyback diode protection to safely switch inductive loads.</li>
+                            <li>Added placeholder spaces for public schematics and test clips not present in the source material.</li>
+                        </ul>
+                        <ul class="chip-list chip-list--compact">
+                            <li>filters</li>
+                            <li>analog design</li>
+                            <li>solenoid driver</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://example.com/lock-case-study">Placeholder case study</a>
+                            <a href="https://example.com/lock-demo">Placeholder demo</a>
+                            <a href="https://example.com/lock-schematics">Placeholder schematics</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-detail-card" id="inverted-pendulum" data-reveal>
+                    <div class="project-poster poster--pendulum" role="img" aria-label="Placeholder visual for the inverted pendulum">
+                        <span class="poster-kicker">Placeholder preview</span>
+                        <strong>Pendulum Rig</strong>
+                        <small>gravity very politely resisted</small>
+                    </div>
+                    <div class="project-detail-copy">
+                        <p class="project-meta">MATLAB / Simulink / Classical Control Theory / PID</p>
+                        <h2>Inverted Pendulum Control System</h2>
+                        <p>Modeled and stabilized an inverted pendulum using classical control theory and simulation-led tuning.</p>
+                        <ul class="detail-list">
+                            <li>Derived a mathematical model of the system and designed a stabilizing PID plus lead-lag controller for critically damped response.</li>
+                            <li>Tuned gains using the Ziegler-Nichols method and validated stability in MATLAB to hit settling-time and overshoot targets.</li>
+                            <li>Added placeholders for the final rig footage and simulation screenshots that are not yet available publicly.</li>
+                        </ul>
+                        <ul class="chip-list chip-list--compact">
+                            <li>modeling</li>
+                            <li>lead-lag</li>
+                            <li>stability analysis</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://example.com/pendulum-case-study">Placeholder case study</a>
+                            <a href="https://example.com/pendulum-demo">Placeholder demo</a>
+                            <a href="https://example.com/pendulum-sim">Placeholder simulation screenshots</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="section-shell footer-row">
+            <p>Hardware wing complete. Software and silicon remain well within walking distance.</p>
+            <a href="index.html">Back to atlas</a>
+        </div>
+    </footer>
+</body>
+</html>

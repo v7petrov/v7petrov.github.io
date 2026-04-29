@@ -3,328 +3,521 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor Petrov - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <title>Project Atlas | Victor Petrov</title>
+    <meta name="description" content="Project atlas for Victor Petrov covering software, hardware, controls, and digital design work.">
+    <meta name="theme-color" content="#08111b">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js" defer></script>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="logo">Victor Petrov</div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-menu" id="mobile-menu">
+<body data-page="atlas">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-aura page-aura--one" aria-hidden="true"></div>
+    <div class="page-aura page-aura--two" aria-hidden="true"></div>
+    <div class="page-grid" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+        <nav class="site-nav section-shell" aria-label="Primary">
+            <a class="wordmark" href="../index.html">
+                Victor Petrov
+                <span>project atlas</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-panel" data-nav-toggle>
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-        </div>
-    </nav>
+                <span class="sr-only">Toggle navigation</span>
+            </button>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Hello, I'm Victor Petrov</h1>
-            <p class="subtitle">Computer Engineering Student • Cal Poly, San Luis Obispo</p>
-            <p class="description">I love to learn and build anything that has to do with computers and technology.</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">
-                    <i class="fas fa-rocket"></i>
-                    View My Work
-                </a>
-                <a href="#contact" class="btn btn-outline">
-                    <i class="fas fa-envelope"></i>
-                    Get In Touch
-                </a>
+            <div class="nav-panel" id="site-nav-panel" data-nav-panel>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#experience">Experience</a>
+                <a href="../index.html#skills">Skills</a>
+                <a href="software-projects.html">Software</a>
+                <a href="hardware-control-projects.html">Hardware</a>
+                <a href="chip-design-projects.html">Silicon</a>
+                <a class="button button--nav" href="../index.html#contact">Contact</a>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <!-- About Section -->
-    <section class="section" id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-image">
-                <img src="images/IMG_2143.jpg" alt="Victor Petrov" class="profile-photo" loading="lazy">
-            </div>
-            <div class="about-text">
-                <p>My name is Victor Petrov. I study Computer Engineering at California Polytechnic State University, San Luis Obispo.</p>
-                <p>I've worked on everything from software to hardware — spanning embedded systems, firmware, and application development.</p>
-                <p>I enjoy learning by building and focusing on robust, clear solutions.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section" id="skills">
-        <h2 class="section-title">Skills & Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <i class="fas fa-code"></i>
-                <h3>Software Development</h3>
-                <p>Python, C++, Java, C, React, React Native, Flask, Web Development, Mobile Apps</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-microchip"></i>
-                <h3>Embedded Systems</h3>
-                <p>STM32, RISC-V, SystemVerilog, FPGA Development, Bare Metal Programming, HAL-free Development</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-network-wired"></i>
-                <h3>Hardware & Networking</h3>
-                <p>Digital Design, Analog Circuits, VGA, UART/USART, SPI, I2C, PCIe, Wishbone Protocol</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Cybersecurity</h3>
-                <p>CTF Challenges, Binary Exploitation, Web Security, Spectre/Meltdown, Chip Whisperer Attacks</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-cogs"></i>
-                <h3>Control Systems</h3>
-                <p>Motor Control, Servo Control, Inverted Pendulum, PID Control, Robotics, Mathematical Modeling</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-database"></i>
-                <h3>Infrastructure & Tools</h3>
-                <p>Docker, Supabase, Linux, Git, Operating Systems, File Systems, Memory Management</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-code"></i>
+    <main id="main">
+        <section class="section-shell project-page-hero">
+            <div class="subpage-headline" data-reveal>
+                <p class="eyebrow">Project Atlas</p>
+                <h1>Everything from the resume, organized into three loud and useful wings.</h1>
+                <p>
+                    This page maps every listed project into software, hardware/control, and chip design sections.
+                    Detailed writeups live on the linked category pages, while missing media and repos are represented with labeled placeholders.
+                </p>
+                <div class="hero-meta-row">
+                    <span>18 total projects</span>
+                    <span>placeholder visuals included</span>
+                    <span>deep dives one click away</span>
                 </div>
-                <div class="project-content">
-                    <h3>Software/Firmware Projects</h3>
-                    <p>A collection of software projects I've worked on, including a web application, mobile app, robotics, and more.</p>
-                    <div class="project-links">
-                        <a href="software-projects.html"><i class="fas fa-external-link-alt"></i> View Projects</a>
-                        <a href="https://github.com/v7petrov"><i class="fab fa-github"></i> Source Code</a>
+                <p class="page-note">
+                    Placeholder rule: if the repo, demo, photo, or case study was not available in the source material, the site now says so directly instead of pretending otherwise.
+                </p>
+            </div>
+        </section>
+
+        <section class="section-shell section-stack">
+            <div class="atlas-preview-grid">
+                <article class="card atlas-card" data-reveal>
+                    <p class="atlas-count">Software Wing</p>
+                    <h3>Software, AI &amp; Simulation</h3>
+                    <p>Telemetry stacks, Linux robot control, VTOL autonomy experiments, custom transformers, and CUDA kernel work.</p>
+                    <a class="button button--ghost" href="software-projects.html">Open deep dive</a>
+                </article>
+
+                <article class="card atlas-card" data-reveal>
+                    <p class="atlas-count">Hardware Wing</p>
+                    <h3>Hardware, Robotics &amp; Controls</h3>
+                    <p>Embedded systems, motor control, instrumentation, battery systems, underwater robots, and one frequency-selective lock.</p>
+                    <a class="button button--ghost" href="hardware-control-projects.html">Open deep dive</a>
+                </article>
+
+                <article class="card atlas-card" data-reveal>
+                    <p class="atlas-count">Silicon Wing</p>
+                    <h3>Chip Design &amp; Digital Systems</h3>
+                    <p>Custom processors, accelerators, RAM blocks, FIFOs, and hardware security work with placeholders standing in for confidential glamour shots.</p>
+                    <a class="button button--ghost" href="chip-design-projects.html">Open deep dive</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-shell section-stack">
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">Software Wing</p>
+                <h2>Applications, models, and simulations that give hardware a brain, a dashboard, or both.</h2>
+            </div>
+
+            <div class="directory-grid">
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--telemetry" role="img" aria-label="Placeholder visual for the telemetry platform">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>Live Telemetry</strong>
+                        <small>graphs are pretending not to panic</small>
                     </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-microchip"></i>
-                </div>
-                <div class="project-content">
-                    <h3>Chip Design and FPGA Projects</h3>
-                    <p>A collection of chip design projects I've worked on, including a 32-bit RISC-V processor, a blackjack simulator, and more.</p>
-                    <div class="project-links">
-                        <a href="chip-design-projects.html"><i class="fas fa-external-link-alt"></i> View Projects</a>
-                        <a href="https://github.com/v7petrov"><i class="fab fa-github"></i> Source Code</a>
+                    <div>
+                        <p class="project-category">Python / Flask / React / Docker</p>
+                        <h3>Real-Time Telemetry Platform</h3>
+                        <p>Full-stack telemetry tooling for real-time vehicle data, testing workflows, and troubleshooting.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>full stack</li>
+                            <li>testing</li>
+                            <li>data capture</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="software-projects.html#telemetry-platform">Open deep dive</a>
+                            <a href="https://example.com/telemetry-placeholder">Placeholder link</a>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <div class="project-content">
-                    <h3>Hardware & Control Systems</h3>
-                    <p>Robotics and control system projects including motor control, servo systems, inverted pendulum, and embedded designs.</p>
-                    <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> View Projects</a>
-                        <a href="https://github.com/v7petrov"><i class="fab fa-github"></i> Source Code</a>
+                </article>
+
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--pipette" role="img" aria-label="Placeholder visual for the pipetting robot control system">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>Pipetting Control</strong>
+                        <small>precise enough to judge your posture</small>
                     </div>
-                </div>
+                    <div>
+                        <p class="project-category">C++ / Linux / Embedded Systems</p>
+                        <h3>Real-time Control System for Pipetting Robot</h3>
+                        <p>Linux-based embedded software with web-controlled networking for a 3-axis machine platform.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>machine control</li>
+                            <li>network commands</li>
+                            <li>embedded linux</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="software-projects.html#pipetting-robot">Open deep dive</a>
+                            <a href="https://example.com/pipetting-robot-placeholder">Placeholder link</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--vtol" role="img" aria-label="Placeholder visual for the VTOL simulation">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>Autonomy Sim</strong>
+                        <small>airframe currently imaginary</small>
+                    </div>
+                    <div>
+                        <p class="project-category">Python / C++ / Gazebo</p>
+                        <h3>Autonomous VTOL Simulation</h3>
+                        <p>Mission logic, HITL testing, and OpenCV-assisted autonomy inside a VTOL simulation environment.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>HITL</li>
+                            <li>FSM</li>
+                            <li>simulation</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="software-projects.html#vtol-simulation">Open deep dive</a>
+                            <a href="https://example.com/vtol-placeholder">Placeholder link</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--gpt" role="img" aria-label="Placeholder visual for MiniGPT">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>MiniGPT</strong>
+                        <small>tiny transformer, large curiosity</small>
+                    </div>
+                    <div>
+                        <p class="project-category">PyTorch / Google Colab</p>
+                        <h3>MiniGPT</h3>
+                        <p>A minimal transformer built from scratch to understand tokenization, attention, embeddings, and generation.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>transformers</li>
+                            <li>attention</li>
+                            <li>training loop</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="software-projects.html#minigpt">Open deep dive</a>
+                            <a href="https://example.com/minigpt-placeholder">Placeholder link</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--mnist" role="img" aria-label="Placeholder visual for the MNIST ANN project">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>CUDA Vision</strong>
+                        <small>matmul doing cardio</small>
+                    </div>
+                    <div>
+                        <p class="project-category">CUDA / C / C++ / Google Colab</p>
+                        <h3>MNIST ANN</h3>
+                        <p>Custom CUDA kernels, shared-memory optimizations, and faster inference for an ANN pipeline.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>shared memory</li>
+                            <li>IM2COL</li>
+                            <li>benchmarking</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="software-projects.html#mnist-ann">Open deep dive</a>
+                            <a href="https://example.com/mnist-placeholder">Placeholder link</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--ptx" role="img" aria-label="Placeholder visual for the CUDA PTX matmul project">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>PTX Kernel</strong>
+                        <small>benchmark chart arriving later</small>
+                    </div>
+                    <div>
+                        <p class="project-category">CUDA / PTX</p>
+                        <h3>CUDA PTX matmul</h3>
+                        <p>Low-level PTX matrix multiplication work, with room reserved for future public performance notes.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>ptx</li>
+                            <li>kernel work</li>
+                            <li>placeholders active</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="software-projects.html#ptx-matmul">Open deep dive</a>
+                            <a href="https://example.com/ptx-placeholder">Placeholder link</a>
+                        </div>
+                    </div>
+                </article>
             </div>
+        </section>
+
+        <section class="section-shell section-stack">
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">Hardware Wing</p>
+                <h2>Robotics, power, control loops, and the kind of debugging that smells faintly like solder.</h2>
+            </div>
+
+            <div class="directory-grid">
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--motor" role="img" aria-label="Placeholder visual for the motor control system">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>Motor Control</strong>
+                        <small>torque with paperwork</small>
+                    </div>
+                    <div>
+                        <p class="project-category">C / C++ / Embedded Linux</p>
+                        <h3>Real-Time Motor Control System</h3>
+                        <p>Custom firmware adaptation, calibration, terminal tooling, and safety validation for a motor controller stack.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>firmware</li>
+                            <li>fault handling</li>
+                            <li>telemetry</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="hardware-control-projects.html#motor-control">Open deep dive</a>
+                            <a href="https://example.com/motor-placeholder">Placeholder link</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--robot" role="img" aria-label="Placeholder visual for the four-axis robot arm">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>4-Axis Arm</strong>
+                        <small>distributed control, limited chaos</small>
+                    </div>
+                    <div>
+                        <p class="project-category">PCB Design / Bare Metal C / MicroPython / BLE</p>
+                        <h3>Full Stack 4-Axis Robot Arm</h3>
+                        <p>Custom RP2040 control boards, inverse kinematics, and a BLE interface for coordinated motion.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>ik</li>
+                            <li>distributed nodes</li>
+                            <li>wireless control</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="hardware-control-projects.html#robot-arm">Open deep dive</a>
+                            <a href="https://example.com/robot-arm-placeholder">Placeholder link</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--gridguard" role="img" aria-label="Placeholder visual for GridGuard">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>GridGuard</strong>
+                        <small>battery chemistry with ambition</small>
+                    </div>
+                    <div>
+                        <p class="project-category">Battery Chemistry / Power Electronics</p>
+                        <h3>GridGuard - Residential Battery UPS</h3>
+                        <p>Product concept and prototype for residential backup power built around reclaimed lithium cells.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>product dev</li>
+                            <li>cell validation</li>
+                            <li>power conversion</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="hardware-control-projects.html#gridguard">Open deep dive</a>
+                            <a href="https://example.com/gridguard-placeholder">Placeholder link</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--instrument" role="img" aria-label="Placeholder visual for the function generator and oscilloscope">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>Bench Instrument</strong>
+                        <small>HAL-free and mildly judgmental</small>
+                    </div>
+                    <div>
+                        <p class="project-category">C++ / I2C / PWM / UART</p>
+                        <h3>Function Generator and Oscilloscope</h3>
+                        <p>Register-level STM32 instrument firmware built without HAL, including direct protocol implementation.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>stm32</li>
+                            <li>register level</li>
+                            <li>jtag</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="hardware-control-projects.html#function-generator">Open deep dive</a>
+                            <a href="https://example.com/instrument-placeholder">Placeholder link</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--rov" role="img" aria-label="Placeholder visual for the underwater ROV">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>ROV Control</strong>
+                        <small>currently less wet than usual</small>
+                    </div>
+                    <div>
+                        <p class="project-category">ESP32 / C++ / Servo Control</p>
+                        <h3>Underwater Remote Operating Vehicle</h3>
+                        <p>Bluetooth-controlled ESP32 firmware for a multi-servo underwater vehicle with onboard sensing.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>bluetooth</li>
+                            <li>sensors</li>
+                            <li>servo control</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="hardware-control-projects.html#rov">Open deep dive</a>
+                            <a href="https://example.com/rov-placeholder">Placeholder link</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--lock" role="img" aria-label="Placeholder visual for the frequency-actuated lock">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>Audio Lock</strong>
+                        <small>very specific taste in frequencies</small>
+                    </div>
+                    <div>
+                        <p class="project-category">Analog Circuits / Power Electronics</p>
+                        <h3>Frequency-Actuated Lock</h3>
+                        <p>Analog lock built around cascaded bandpass filters, BJT amplification, and a protected solenoid driver stage.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>op-amps</li>
+                            <li>filters</li>
+                            <li>solenoid driver</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="hardware-control-projects.html#frequency-lock">Open deep dive</a>
+                            <a href="https://example.com/lock-placeholder">Placeholder link</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--pendulum" role="img" aria-label="Placeholder visual for the inverted pendulum project">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>Pendulum Lab</strong>
+                        <small>gravity briefly negotiated with</small>
+                    </div>
+                    <div>
+                        <p class="project-category">MATLAB / Simulink / Control Theory</p>
+                        <h3>Inverted Pendulum Control System</h3>
+                        <p>Modeled and tuned a PID plus lead-lag controller for a critically damped, stable pendulum response.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>modeling</li>
+                            <li>pid</li>
+                            <li>ziegler-nichols</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="hardware-control-projects.html#inverted-pendulum">Open deep dive</a>
+                            <a href="https://example.com/pendulum-placeholder">Placeholder link</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-shell section-stack">
+            <div class="section-heading" data-reveal>
+                <p class="eyebrow">Silicon Wing</p>
+                <h2>Architecture, accelerators, memory systems, and one hardware CTF challenge with deliberate mystery.</h2>
+            </div>
+
+            <div class="directory-grid">
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--riscv" role="img" aria-label="Placeholder visual for the custom RISC-V processor">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>RV Core</strong>
+                        <small>pipeline behaving almost nobly</small>
+                    </div>
+                    <div>
+                        <p class="project-category">Python / SystemVerilog / Hardware Validation</p>
+                        <h3>Custom RISC-V Processor</h3>
+                        <p>RISC-V core featuring caches, pipelining, a four-stage branch predictor, FPGA validation, and testbench coverage work.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>processor design</li>
+                            <li>branch prediction</li>
+                            <li>fpga</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="chip-design-projects.html#riscv-processor">Open deep dive</a>
+                            <a href="https://example.com/riscv-placeholder">Placeholder link</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--rng" role="img" aria-label="Placeholder visual for the RNG accelerator">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>RNG Accelerator</strong>
+                        <small>entropy acting professional</small>
+                    </div>
+                    <div>
+                        <p class="project-category">Python / SystemVerilog / Hardware Validation</p>
+                        <h3>Low Power Random Number Generator Accelerator</h3>
+                        <p>Cryptographic accelerator with nonlinear shift registers, seeding logic, PUF integration, and AXI communication.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>crypto hardware</li>
+                            <li>puf</li>
+                            <li>axi</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="chip-design-projects.html#rng-accelerator">Open deep dive</a>
+                            <a href="https://example.com/rng-placeholder">Placeholder link</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--dram" role="img" aria-label="Placeholder visual for the DRAM accelerator">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>Dual-Port RAM</strong>
+                        <small>collision handling under supervision</small>
+                    </div>
+                    <div>
+                        <p class="project-category">Python / SystemVerilog / Hardware Validation</p>
+                        <h3>Dual port DRAM accelerator</h3>
+                        <p>Wishbone-compatible dual-port RAM with macro-based implementation, collision detection, and corner timing validation.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>wishbone</li>
+                            <li>timing corners</li>
+                            <li>gate level</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="chip-design-projects.html#dram-accelerator">Open deep dive</a>
+                            <a href="https://example.com/dram-placeholder">Placeholder link</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--fifo" role="img" aria-label="Placeholder visual for the asynchronous FIFO">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>Async FIFO</strong>
+                        <small>metastability politely discouraged</small>
+                    </div>
+                    <div>
+                        <p class="project-category">Python / SystemVerilog / Hardware Validation</p>
+                        <h3>Asynchronous FIFO</h3>
+                        <p>Clock-domain crossing design using gray encoding, synchronized pointers, and gate-level validation.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>cdc</li>
+                            <li>gray code</li>
+                            <li>yosys</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="chip-design-projects.html#async-fifo">Open deep dive</a>
+                            <a href="https://example.com/fifo-placeholder">Placeholder link</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card directory-card" data-reveal>
+                    <div class="project-poster poster--ctf" role="img" aria-label="Placeholder visual for the hardware CTF challenge">
+                        <span class="poster-kicker">Directory card</span>
+                        <strong>Hardware CTF</strong>
+                        <small>official details still in witness protection</small>
+                    </div>
+                    <div>
+                        <p class="project-category">Arduino / C / I2C</p>
+                        <h3>Hardware CTF challenge</h3>
+                        <p>An Arduino-based hardware security challenge with intentionally incomplete public details, now marked with explicit placeholders.</p>
+                        <ul class="chip-list chip-list--compact">
+                            <li>security</li>
+                            <li>challenge design</li>
+                            <li>placeholders active</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="chip-design-projects.html#hardware-ctf">Open deep dive</a>
+                            <a href="https://example.com/hardware-ctf-placeholder">Placeholder link</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="section-shell footer-row">
+            <p>The atlas is the summary. The category pages are the lab drawers.</p>
+            <a href="../index.html">Back home</a>
         </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="section" id="experience">
-        <h2 class="section-title">Experience</h2>
-        <div class="experience-timeline">
-            <div class="experience-item">
-                <div class="experience-icon">
-                    <img src="icons/generalatomics.png" alt="General Atomics" class="company-icon">
-                </div>
-                <div class="experience-date">
-                    <span class="year">2025</span>
-                    <span class="duration">3 months</span>
-                </div>
-                <div class="experience-content">
-                    <h3>Controls Software Engineer Intern</h3>
-                    <h4>General Atomics</h4>
-                    <p class="experience-location">San Diego, CA</p>
-                    <p class="experience-description">Developed C++ software tools and Python automation scripts for robotic system integration and test validation. Debugged complex hardware-software integration issues across mechanical, electrical, and control systems. Analyzed system-level performance data achieving 300% optimization improvement through root cause investigation. Collaborated with senior engineers on validation plans for autonomous systems under real-world conditions. Implemented comprehensive testing frameworks and data analysis tools for robotic system validation.</p>
-                    <div class="experience-tags">
-                        <span class="tag">C/C++</span>
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">Video Streaming</span>
-                        <span class="tag">CMake</span>
-                        <span class="tag">Agile</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="experience-item">
-                <div class="experience-icon">
-                    <img src="icons/calpoly.png" alt="Cal Poly" class="company-icon">
-                </div>
-                <div class="experience-date">
-                    <span class="year">2024</span>
-                    <span class="duration">9 months</span>
-                </div>
-                <div class="experience-content">
-                    <h3>ISA Student Assistant</h3>
-                    <h4>California Polytechnic University</h4>
-                    <p class="experience-location">San Luis Obispo, CA</p>
-                    <p class="experience-description">Guide students in using industry software for FPGA-based digital design and synthesis. Assist students with troubleshooting complex digital logic circuits.</p>
-                    <div class="experience-tags">
-                        <span class="tag">Verilog</span>
-                        <span class="tag">SystemVerilog</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Hardware Design</span>
-                        <span class="tag">FPGA</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="experience-item">
-                <div class="experience-icon">
-                    <img src="icons/leguan.jpg" alt="LEGUAN MicroElectronics" class="company-icon">
-                </div>
-                <div class="experience-date">
-                    <span class="year">2024</span>
-                    <span class="duration">3 months</span>
-                </div>
-                <div class="experience-content">
-                    <h3>Embedded Software Intern</h3>
-                    <h4>LEGUAN MicroElectronics Co</h4>
-                    <p class="experience-location">Shandong, China</p>
-                    <p class="experience-description">Developed robot behaviors and control algorithms achieving 97% accuracy in industrial automation systems. Created software integration tools and automated testing scripts for real-time robotic control systems. Analyzed performance data and implemented improvements for autonomous control system validation.</p>
-                    <div class="experience-tags">
-                        <span class="tag">PLC Programming</span>
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Embedded</span>
-                        <span class="tag">Microelectronics</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <h3>Let's work together!</h3>
-                <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out if you'd like to collaborate or just say hello!</p>
-                
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>799vpetrov@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>Email me at 799vpetrov@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>CA, USA</span>
-                </div>
-
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/v7petrov"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            
-            <form class="contact-form" id="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <input type="text" placeholder="Subject" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i>
-                    Send Message
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Victor Petrov. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Mobile menu toggle
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.getElementById('nav-links');
-
-        mobileMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        navLinks.addEventListener('click', (e) => {
-            if (e.target.tagName === 'A') {
-                navLinks.classList.remove('active');
-            }
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Contact form handling
-        const contactForm = document.getElementById('contact-form');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // Here you would typically send the data to your server
-            console.log('Form submitted:', data);
-            
-            // Show success message (you can customize this)
-            alert('Thank you for your message! I\'ll get back to you soon.');
-            
-            // Reset form
-            contactForm.reset();
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>

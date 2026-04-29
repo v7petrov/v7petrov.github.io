@@ -3,155 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chip Design Projects - Victor Petrov</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <title>Chip Design &amp; Digital Systems Projects | Victor Petrov</title>
+    <meta name="description" content="Chip design and digital systems projects by Victor Petrov.">
+    <meta name="theme-color" content="#08111b">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js" defer></script>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="logo">Victor Petrov</div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#skills">Skills</a></li>
-                <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-menu" id="mobile-menu">
+<body data-page="silicon">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-aura page-aura--one" aria-hidden="true"></div>
+    <div class="page-aura page-aura--two" aria-hidden="true"></div>
+    <div class="page-grid" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+        <nav class="site-nav section-shell" aria-label="Primary">
+            <a class="wordmark" href="../index.html">
+                Victor Petrov
+                <span>silicon wing</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-panel" data-nav-toggle>
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-        </div>
-    </nav>
+                <span class="sr-only">Toggle navigation</span>
+            </button>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Chip Design & FPGA Projects</h1>
-            <p class="subtitle">A collection of my hardware design work</p>
-            <p class="description">From RISC-V processors to cryptographic accelerators, here's what I've built at the hardware level.</p>
-            <div class="cta-buttons">
-                <a href="index.html#projects" class="btn btn-outline">
-                    <i class="fas fa-arrow-left"></i>
-                    Back to Portfolio
-                </a>
+            <div class="nav-panel" id="site-nav-panel" data-nav-panel>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#experience">Experience</a>
+                <a href="../index.html#skills">Skills</a>
+                <a href="index.html">Atlas</a>
+                <a href="software-projects.html">Software</a>
+                <a href="hardware-control-projects.html">Hardware</a>
+                <a class="button button--nav" href="../index.html#contact">Contact</a>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-        <h2 class="section-title">Chip Design & FPGA Projects</h2>
-        
-        <div class="project-item">
-            <div class="project-image">
-                <i class="fas fa-microchip"></i>
-            </div>
-            <div class="project-content">
-                <h3>FPGA RISC-V Processor</h3>
-                <p>A RISC-V processor with a 5 stage pipeline and a L1 4 way cache. Follows the RISC-V ISA and can run assembly programs simulated on a BASYS3 development board. Implemented in Verilog and SystemVerilog</p>
-                <p class="project-description">A RISC-V processors that follows modern computer architecture. Although modern chips usually have way more cores, pipelines up to 20 cycles long, and a lot of parallel distributions, this chip is almost there. It has a branch predictor, hazard detection unit, made for low power processing and all done in SystemVerilog and Verilog.</p>
-                <div class="project-links">
-                    <a href="#"><i class="fas fa-external-link-alt"></i> Learn more</a>
-                    <a href="https://github.com/v7petrov"><i class="fab fa-github"></i> Source Code</a>
+    <main id="main">
+        <section class="section-shell project-page-hero">
+            <div class="subpage-headline" data-reveal>
+                <p class="eyebrow">Chip Design &amp; Digital Systems</p>
+                <h1>Processors, accelerators, RAM, FIFOs, and a hardware challenge with a carefully preserved blank space.</h1>
+                <p>
+                    This wing focuses on the architecture and verification side of the portfolio: custom digital systems,
+                    hardware accelerators, memory blocks, and hardware security work. Where the source material was incomplete,
+                    the site now says so directly and leaves a deliberate placeholder.
+                </p>
+                <div class="hero-meta-row">
+                    <span>5 detailed projects</span>
+                    <span>validation-heavy work</span>
+                    <span>placeholders used for undisclosed details</span>
                 </div>
             </div>
-        </div>
-        
-        <div class="project-item">
-            <div class="project-image">
-                <i class="fas fa-spade"></i>
-            </div>
-            <div class="project-content">
-                <h3>Blackjack</h3>
-                <p>Blackjack ran on hardware. With a secret. Implemented all in Verilog and SystemVerilog</p>
-                <p class="project-description">Although it probably would've been smarter to make the entire thing on the processor with assembly, I challenged myself to write the entire thing with an FPGA. The entire system communicates the game state to a VGA controller which then shows the entire game on a monitor via a VGA cable. This was part of a hardware security project so to stay on topic, there is a hardware trojan in the code. All that can be said about it is it rigs the game in your favor.</p>
-                <div class="project-links">
-                    <a href="#"><i class="fas fa-external-link-alt"></i> Learn more</a>
-                    <a href="https://github.com/v7petrov"><i class="fab fa-github"></i> Source Code</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="project-item">
-            <div class="project-image">
-                <i class="fas fa-infinity"></i>
-            </div>
-            <div class="project-content">
-                <h3>Ring Oscillator, Physically Unclonable Function</h3>
-                <p>A PUF is a hardware mechanism used to create challenge and response pairs to verify on the hardware level if a device is who they say they are. Implemented with VHDL and SystemVerilog</p>
-                <p class="project-description">The challenge here was the platform developed- Vivado, which did not like combinatorial loops. The entire RO PUF is an implementation of a research paper that talks about creating a ring oscillator as a PUF on artix FPGA boards, which was what the result was simulated on.</p>
-                <div class="project-links">
-                    <a href="#"><i class="fas fa-external-link-alt"></i> Learn more</a>
-                    <a href="https://github.com/v7petrov"><i class="fab fa-github"></i> Source Code</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="project-item">
-            <div class="project-image">
-                <i class="fas fa-random"></i>
-            </div>
-            <div class="project-content">
-                <h3>Pseudo RNG Accelerator</h3>
-                <p>A low power efficient warbler RNG chip built with open source ASIC development software. IO via</p>
-                <p class="project-description">Read a lot of RNG chip research papers and refitted a chip used on IR scanning stuff for use on cryptographic key generations. It stores the random numbers on a dual port ram implemented with the wishbone protocol. The RNG bitstreams will randomly change the RAMs while other cryptographic machines can use the other port to access and use the random numbers for whatever purpose they need.</p>
-                <div class="project-links">
-                    <a href="#"><i class="fas fa-external-link-alt"></i> Learn more</a>
-                    <a href="https://github.com/v7petrov"><i class="fab fa-github"></i> Source Code</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="project-item">
-            <div class="project-image">
-                <i class="fas fa-memory"></i>
-            </div>
-            <div class="project-content">
-                <h3>Wishbone Dualport RAM</h3>
-                <p>Dualport ram following wishbone protocol and architecture, built using defined macros and simulated with gate level testing.</p>
-                <p class="project-description">RAM cannot be made and simulated because if it was, the amount of flip flops would crash computers. Instead, defined macros are used instead with realistic physics timings and more.</p>
-                <div class="project-links">
-                    <a href="#"><i class="fas fa-external-link-alt"></i> Learn more</a>
-                    <a href="https://github.com/v7petrov"><i class="fab fa-github"></i> Source Code</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Victor Petrov. All rights reserved.</p>
+        <section class="section-shell section-stack">
+            <div class="project-detail-grid">
+                <article class="card project-detail-card" id="riscv-processor" data-reveal>
+                    <div class="project-poster poster--riscv" role="img" aria-label="Placeholder visual for the custom RISC-V processor">
+                        <span class="poster-kicker">Placeholder preview</span>
+                        <strong>RV Pipeline</strong>
+                        <small>branches making choices</small>
+                    </div>
+                    <div class="project-detail-copy">
+                        <p class="project-meta">Python / SystemVerilog / Hardware Validation</p>
+                        <h2>Custom RISC-V Processor</h2>
+                        <p>Designed and validated a RISC-V core with modern architecture features and FPGA-targeted verification.</p>
+                        <ul class="detail-list">
+                            <li>Designed and implemented a RISC-V core with caches, pipelined instructions, and a four-stage branch predictor.</li>
+                            <li>Simulated and verified the design on Xilinx FPGA hardware, implementing firmware test functions for RV32 execution.</li>
+                            <li>Read and followed the ISA closely while building SystemVerilog testbenches to drive functional coverage.</li>
+                        </ul>
+                        <ul class="chip-list chip-list--compact">
+                            <li>branch prediction</li>
+                            <li>fpga validation</li>
+                            <li>testbenches</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://example.com/riscv-case-study">Placeholder case study</a>
+                            <a href="https://example.com/riscv-waveforms">Placeholder waveforms</a>
+                            <a href="https://example.com/riscv-repo">Placeholder repo</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-detail-card" id="rng-accelerator" data-reveal>
+                    <div class="project-poster poster--rng" role="img" aria-label="Placeholder visual for the random number generator accelerator">
+                        <span class="poster-kicker">Placeholder preview</span>
+                        <strong>Entropy Engine</strong>
+                        <small>nonlinear shift registers at work</small>
+                    </div>
+                    <div class="project-detail-copy">
+                        <p class="project-meta">Python / SystemVerilog / Hardware Validation</p>
+                        <h2>Low Power Random Number Generator Accelerator</h2>
+                        <p>Built a cryptographic accelerator around low-power entropy generation and structured communication.</p>
+                        <ul class="detail-list">
+                            <li>Implemented a low-power, high-throughput cryptography accelerator based on a research paper, including three nonlinear shift registers plus reset and seeding capabilities.</li>
+                            <li>Created and simulated a physically unclonable function interface for true random bit generation.</li>
+                            <li>Integrated RAM macros for storage and transmission while carrying out communication via the AXI protocol.</li>
+                        </ul>
+                        <ul class="chip-list chip-list--compact">
+                            <li>crypto accelerator</li>
+                            <li>puf</li>
+                            <li>axi</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://example.com/rng-case-study">Placeholder case study</a>
+                            <a href="https://example.com/rng-waveforms">Placeholder waveforms</a>
+                            <a href="https://example.com/rng-benchmarks">Placeholder benchmarks</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-detail-card" id="dram-accelerator" data-reveal>
+                    <div class="project-poster poster--dram" role="img" aria-label="Placeholder visual for the dual-port DRAM accelerator">
+                        <span class="poster-kicker">Placeholder preview</span>
+                        <strong>Memory Fabric</strong>
+                        <small>collision checks still polite</small>
+                    </div>
+                    <div class="project-detail-copy">
+                        <p class="project-meta">Python / SystemVerilog / Hardware Validation</p>
+                        <h2>Dual port DRAM accelerator</h2>
+                        <p>Designed and validated a dual-port memory system using macros and Wishbone-style communication.</p>
+                        <ul class="detail-list">
+                            <li>Designed, tested, and validated a dual-port RAM module following the Wishbone protocol, including gate-level testing and corner timing checks.</li>
+                            <li>Integrated two DRAM macros and validated collision detection plus high-throughput behavior through Python and Bash scripting.</li>
+                            <li>Balanced density and collision tradeoffs so the module could be reused smoothly in other systems.</li>
+                        </ul>
+                        <ul class="chip-list chip-list--compact">
+                            <li>wishbone</li>
+                            <li>dram macros</li>
+                            <li>timing validation</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://example.com/dram-case-study">Placeholder case study</a>
+                            <a href="https://example.com/dram-waveforms">Placeholder waveforms</a>
+                            <a href="https://example.com/dram-layout">Placeholder layout views</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-detail-card" id="async-fifo" data-reveal>
+                    <div class="project-poster poster--fifo" role="img" aria-label="Placeholder visual for the asynchronous FIFO">
+                        <span class="poster-kicker">Placeholder preview</span>
+                        <strong>Clock Crossing</strong>
+                        <small>metastability firmly discouraged</small>
+                    </div>
+                    <div class="project-detail-copy">
+                        <p class="project-meta">Python / SystemVerilog / Hardware Validation</p>
+                        <h2>Asynchronous FIFO</h2>
+                        <p>Implemented a clock-domain crossing FIFO with explicit design choices for metastability resistance.</p>
+                        <ul class="detail-list">
+                            <li>Implemented an asynchronous FIFO to transfer information across clock domains while resisting metastability and excessive delay.</li>
+                            <li>Included gray-encoding schemes, pointer-latency handling, and multi-bit synchronization using flip-flop chains.</li>
+                            <li>Tested and validated the design for gate-level behavior using open-source tools such as Yosys.</li>
+                        </ul>
+                        <ul class="chip-list chip-list--compact">
+                            <li>cdc</li>
+                            <li>gray encoding</li>
+                            <li>yosys</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://example.com/fifo-case-study">Placeholder case study</a>
+                            <a href="https://example.com/fifo-waveforms">Placeholder waveforms</a>
+                            <a href="https://example.com/fifo-repo">Placeholder repo</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-detail-card" id="hardware-ctf" data-reveal>
+                    <div class="project-poster poster--ctf" role="img" aria-label="Placeholder visual for the hardware CTF challenge">
+                        <span class="poster-kicker">Placeholder preview</span>
+                        <strong>Security Puzzle</strong>
+                        <small>details redacted for dramatic effect</small>
+                    </div>
+                    <div class="project-detail-copy">
+                        <p class="project-meta">Arduino / C / I2C</p>
+                        <h2>Hardware CTF challenge</h2>
+                        <p>This project entry was incomplete in the resume source, so the site now treats it as an intentionally partial public record.</p>
+                        <ul class="detail-list">
+                            <li>Transformed an Arduino UNO into a hardware challenge platform.</li>
+                            <li>Additional implementation details, challenge flow, and media were not included in the source material and are therefore represented as placeholders.</li>
+                            <li>Reserved space for a future public writeup, challenge walkthrough, and board photos.</li>
+                        </ul>
+                        <ul class="chip-list chip-list--compact">
+                            <li>arduino</li>
+                            <li>i2c</li>
+                            <li>challenge design</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://example.com/hardware-ctf-case-study">Placeholder case study</a>
+                            <a href="https://example.com/hardware-ctf-demo">Placeholder walkthrough</a>
+                            <a href="https://example.com/hardware-ctf-photos">Placeholder board photos</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="section-shell footer-row">
+            <p>Silicon wing complete. The rest of the archive remains close at hand.</p>
+            <a href="index.html">Back to atlas</a>
+        </div>
     </footer>
-
-    <script>
-        // Mobile menu toggle
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.getElementById('nav-links');
-
-        mobileMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        navLinks.addEventListener('click', (e) => {
-            if (e.target.tagName === 'A') {
-                navLinks.classList.remove('active');
-            }
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    </script>
 </body>
 </html>
