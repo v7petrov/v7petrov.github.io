@@ -208,3 +208,11 @@ Temporary Items
 .apdisk
 dev-server.bat
 dev-server.sh
+
+# LaTeX build artifacts
+_resume/*.aux
+_resume/*.fdb_latexmk
+_resume/*.fls
+_resume/*.log
+_resume/*.out
+_resume/*.synctex.gz

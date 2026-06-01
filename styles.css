@@ -1043,6 +1043,51 @@ select {
     border-top: 1px solid var(--line);
 }
 
+.resume-hero {
+    padding: 4.8rem 0 1.5rem;
+}
+
+.resume-hero .subpage-headline {
+    max-width: 48rem;
+}
+
+.resume-viewer-section {
+    padding-bottom: 5rem;
+}
+
+.resume-viewer-card {
+    padding: 0.75rem;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-xl);
+    background: rgba(247, 240, 228, 0.96);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.resume-viewer {
+    display: block;
+    width: 100%;
+    min-height: 48rem;
+    height: min(82vh, 64rem);
+    border: 0;
+    border-radius: calc(var(--radius-xl) - 12px);
+    background: #ffffff;
+}
+
+.resume-fallback {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    min-height: 44rem;
+    padding: 2rem;
+    color: #10141a;
+    text-align: center;
+}
+
+.resume-fallback p {
+    margin: 0;
+}
+
 [data-reveal] {
     opacity: 0;
     transform: translateY(22px);
@@ -1188,6 +1233,24 @@ select {
         max-width: none;
         margin-top: 1rem;
         transform: rotate(-1.5deg);
+    }
+
+    .resume-hero {
+        padding-top: 3.2rem;
+    }
+
+    .resume-viewer-card {
+        padding: 0.35rem;
+    }
+
+    .resume-viewer {
+        min-height: 32rem;
+        height: 76vh;
+        border-radius: calc(var(--radius-xl) - 18px);
+    }
+
+    .resume-fallback {
+        min-height: 30rem;
     }
 
     .metric-card {
