@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Victor Petrov</title>
+    <meta name="description" content="PDF resume for Victor Petrov.">
+    <meta name="theme-color" content="#08111b">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body data-page="resume">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-aura page-aura--one" aria-hidden="true"></div>
+    <div class="page-aura page-aura--two" aria-hidden="true"></div>
+    <div class="page-grid" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+        <nav class="site-nav section-shell" aria-label="Primary">
+            <a class="wordmark" href="index.html">
+                Victor Petrov
+                <span>resume</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-panel" data-nav-toggle>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+
+            <div class="nav-panel" id="site-nav-panel" data-nav-panel>
+                <a href="index.html#about">About</a>
+                <a href="index.html#experience">Experience</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="portfolio/index.html">Atlas</a>
+                <a href="index.html#contact">Contact</a>
+                <a class="button button--nav" href="assets/resume.pdf">Open PDF</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="section-shell resume-hero">
+            <div class="subpage-headline" data-reveal>
+                <p class="eyebrow">Resume</p>
+                <h1>Victor Petrov resume</h1>
+                <div class="hero-actions">
+                    <a class="button button--primary" href="assets/resume.pdf">Open PDF</a>
+                    <a class="button button--ghost" href="assets/resume.pdf" download>Download PDF</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-shell resume-viewer-section" aria-label="Resume PDF">
+            <div class="resume-viewer-card" data-reveal>
+                <object class="resume-viewer" data="assets/resume.pdf#view=FitH" type="application/pdf" aria-label="Victor Petrov resume PDF">
+                    <div class="resume-fallback">
+                        <p>The PDF will appear here after the resume build runs.</p>
+                        <a class="button button--primary" href="assets/resume.pdf">Open PDF</a>
+                    </div>
+                </object>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="section-shell footer-row">
+            <p>Built like a lab notebook, not a sterile brochure.</p>
+            <a href="#top">Back to top</a>
+        </div>
+    </footer>
+</body>
+</html>
